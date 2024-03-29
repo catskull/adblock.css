@@ -11,7 +11,7 @@ ars technica
 slickdeals
 */
 
-.frontpageGrid__bannerAd, .ad, .variableWidthAd, .variableHeightAd, #sideColumn, .slickdealsHeader__disclaimer, .slickdealsHeaderSubNav, .dealAlertsForYou {
+.announcementBar, .frontpageGrid__bannerAd, .ad, .variableWidthAd, .variableHeightAd, #sideColumn, .slickdealsHeader__disclaimer, .slickdealsHeaderSubNav, .dealAlertsForYou {
 	visibility: hidden !important;
 	display: none !important;
 }
