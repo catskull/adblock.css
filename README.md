@@ -18,3 +18,10 @@ Each time you edit and save `adblock.css`, you'll need to re-select it from the 
 ## License
 
 The Unlicense
+
+## Further reading
+
+- This gist (included in adblock.css): https://gist.github.com/4rc0s/374163
+- StopTheMadness: https://underpassapp.com/StopTheMadness/
+
+Also check out my website: https://catskull.net/
