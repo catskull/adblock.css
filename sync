@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+require 'open-uri'
+
+# URL of the text file and the base CSS file
+url = 'https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_general_hide.txt'
+base_file = 'base.css'
+output_file = 'adblock.css'
+
+# Function to minify CSS content
+def minify_css(content)
+  content.gsub(/\/\*.*?\*\//m, '')
+        .gsub(/\s+/, ' ')
+        .gsub(/\s*{\s*/, '{')
+        .gsub(/\s*}\s*/, '}')
+        .gsub(/\s*;\s*/, ';')
+        .gsub(/;\s*}/, '}')
+end
+
+# Read and minify the base CSS file content
+base_content = File.read(base_file)
+minified_base_content = minify_css(base_content)
+
+# Open the URL and read the content, then process each line
+selectors = []
+OpenURI.open_uri(url) do |file|
+  file.each_line do |line|
+    next if line.start_with?('!') || line.strip.empty?
+    selector = line.strip.gsub(/^#+/, '')  # Remove leading # characters
+    selectors << selector
+  end
+end
+
+# Combine all selectors into a single CSS rule
+combined_selectors = selectors.join(', ')
+minified_css_rule = "#{combined_selectors} {display: none !important;visibility: invisible !important;}"
+
+# Write everything to the new CSS file
+File.open(output_file, 'w') do |output|
+  output.puts "/* auto generated with ./sync - do not edit */"
+  output.puts minified_base_content
+  output.puts minify_css(minified_css_rule)
+end
+
+puts "CSS file generated: #{output_file}"
