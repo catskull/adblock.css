@@ -54,8 +54,8 @@ def watch_file(url, base_file, output_file, listen_loaded)
     current_dir = File.dirname(__FILE__)
     listener = Listen.to(current_dir) do |modified, added, removed|
       if (modified + added).any? { |n| n.include?(base_file) }
-        generate_css(url, base_file, output_file)
         puts "#{base_file} has changed. Regenerating #{output_file}."
+        generate_css(url, base_file, output_file)
       end
     end
     listener.start
