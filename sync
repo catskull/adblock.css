@@ -1,6 +1,14 @@
 #!/usr/bin/env ruby
 require 'open-uri'
 
+# Attempt to load the 'listen' gem
+listen_loaded = begin
+  require 'listen'
+  true
+rescue LoadError
+  false
+end
+
 # URL of the text file and the base CSS file
 url = 'https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_annoyance_general_hide.txt'
 base_file = 'base.css'
@@ -16,29 +24,52 @@ def minify_css(content)
         .gsub(/;\s*}/, '}')
 end
 
-# Read and minify the base CSS file content
-base_content = File.read(base_file)
-minified_base_content = minify_css(base_content)
+def generate_css(url, base_file, output_file)
+  base_content = File.read(base_file)
+  minified_base_content = minify_css(base_content)
 
-# Open the URL and read the content, then process each line
-selectors = []
-OpenURI.open_uri(url) do |file|
-  file.each_line do |line|
-    next if line.start_with?('!') || line.strip.empty?
-    selector = line.strip.gsub(/^#+/, '')  # Remove leading # characters
-    selectors << selector
+  selectors = []
+  OpenURI.open_uri(url) do |file|
+    file.each_line do |line|
+      next if line.start_with?('!') || line.strip.empty?
+      selector = line.strip.gsub(/^#+/, '')
+      selectors << selector
+    end
+  end
+
+  combined_selectors = selectors.join(', ')
+  minified_css_rule = "#{combined_selectors} {display: none !important;visibility: invisible !important;}"
+
+  File.open(output_file, 'w') do |output|
+    output.puts "/* auto generated with ./sync - do not edit */"
+    output.puts minified_base_content
+    output.puts minify_css(minified_css_rule)
+  end
+
+  puts "CSS file generated: #{output_file}"
+end
+
+def watch_file(url, base_file, output_file, listen_loaded)
+  if listen_loaded
+    current_dir = File.dirname(__FILE__)
+    listener = Listen.to(current_dir) do |modified, added, removed|
+      if (modified + added).any? { |n| n.include?(base_file) }
+        generate_css(url, base_file, output_file)
+        puts "#{base_file} has changed. Regenerating #{output_file}."
+      end
+    end
+    listener.start
+    puts "Listening for changes in #{base_file}..."
+    sleep
+  else
+    generate_css(url, base_file, output_file)
+    puts "CSS file generated: #{output_file}"
+    puts "Notice: to use --sync you must gem install listen"
   end
 end
 
-# Combine all selectors into a single CSS rule
-combined_selectors = selectors.join(', ')
-minified_css_rule = "#{combined_selectors} {display: none !important;visibility: invisible !important;}"
-
-# Write everything to the new CSS file
-File.open(output_file, 'w') do |output|
-  output.puts "/* auto generated with ./sync - do not edit */"
-  output.puts minified_base_content
-  output.puts minify_css(minified_css_rule)
+if ARGV.include?('--watch')
+  watch_file(url, base_file, output_file, listen_loaded)
+else
+  generate_css(url, base_file, output_file)
 end
-
-puts "CSS file generated: #{output_file}"
