@@ -13,9 +13,11 @@ Note: if you clone this repo, remove the period from the directory name. Safari 
 
 Fork/clone the repo and make your changes to `base.css` (not `adblock.css`!) Run `./sync` to pull in the [easylist/fanboy](https://github.com/easylist/easylist/blob/master/fanboy-addon/fanboy_annoyance_general_hide.txt) additions, minify, and ouput a new `adblock.css`.
 
-Submit a PR. I'll go verify your changes so please make it obvious where I can see your changes (include a link, screenshot, etc).
+`./sync --watch` will watch base.css for changes and output a fresh adblock.css. Run `bundle` or `gem install listen` first!
 
 Each time you edit and save `adblock.css`, you'll need to re-select it from the Safari Settings menu.
+
+Submit a PR. I'll go verify your changes so please make it obvious where I can see your changes (include a link, screenshot, etc).
 
 ## License
 
