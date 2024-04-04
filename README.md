@@ -3,6 +3,9 @@ Safari user agent stylesheet to block annoying stuff
 
 ## Usage
 
+Download <a href="https://raw.githubusercontent.com/catskull/adblock.css/main/adblock.css" download>adblock.css</a>
+(I put mine in iCloud Drive)
+
 Safari -> Settings -> Advanced Tab -> Style Sheet
 
 ![Select the Style Sheet dropdown in the advanced tab of Safafi settings and navigate to your local css file](setup.png)
