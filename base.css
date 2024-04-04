@@ -73,3 +73,19 @@ mozilla ads
 	visibility: hidden !important;
 	display: none !important;
 }
+
+/*
+washington post
+*/
+#leaderboard-wrapper, [id*="softwall"], .hide-for-print, .outbrain-wrapper {
+	visibility: hidden !important;
+	display: none !important;
+}
+
+/*
+medium
+*/
+div.bw.tz.ua.bg.xo {
+	visibility: hidden !important;
+	display: none !important;
+}
