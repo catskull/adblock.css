@@ -85,7 +85,7 @@ washington post
 /*
 medium
 */
-div.bw.tz.ua.bg.xo {
+div[style]:has(button[data-testid="close-button"]) {
 	visibility: hidden !important;
 	display: none !important;
 }
