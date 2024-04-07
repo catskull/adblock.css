@@ -45,6 +45,7 @@ ksl
 .paid_ad_queue_story,
 .paid_ad_queue_break,
 .queue:has(h3.sponsored),
+.LiveNow,
 [class^="InformationBubble__PointerBox"] {
 	visibility: hidden !important;
 	display: none !important;
@@ -97,3 +98,12 @@ church of jesus christ
 	margin: 0 auto !important;
 	align-content: center !important
 }
+
+/*
+fedex
+*/
+trk-shared-shop-runner-app-banner, #nuanMessagingFrame, trk-shared-fdm-banner {
+	visibility: hidden !important;
+	display: none !important;
+}
+
