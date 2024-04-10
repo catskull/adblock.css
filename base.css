@@ -107,3 +107,11 @@ trk-shared-shop-runner-app-banner, #nuanMessagingFrame, trk-shared-fdm-banner {
 	display: none !important;
 }
 
+/*
+imdb
+*/
+*[aria-label="Sponsored Content"], #provider_promotion_responsive_wrapper, *[data-testid="hero-media__slate"], *[data-test-id="right-rail-content-block"] {
+    visibility: hidden !important;
+    display: none !important;
+}
+
