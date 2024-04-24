@@ -1,11 +1,11 @@
 /*
 general
 */
-[class*="ad-"], [class*="Ad"], [class*="aD-"], [class*="AD-"],
+/*[class*="ad-"], [class*="Ad"], [class*="aD-"], [class*="AD-"],
 [id*="ad-"], [id*="Ad"], [id*="aD-"], [id*="AD-"] {
 	visibility: hidden !important;
 	display: none !important;
-}
+}*/
 
 /*
 ars technica
