@@ -115,3 +115,11 @@ imdb
     display: none !important;
 }
 
+/*
+admiral ad block annoyer
+*/
+body > div:has(img[src*="getadmiral.com"]) {
+    visibility: hidden !important;
+    display: none !important;
+}
+
