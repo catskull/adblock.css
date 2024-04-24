@@ -1,4 +1,13 @@
 /*
+general
+*/
+[class*="ad-"], [class*="Ad"], [class*="aD-"], [class*="AD-"],
+[id*="ad-"], [id*="Ad"], [id*="aD-"], [id*="AD-"] {
+	visibility: hidden !important;
+	display: none !important;
+}
+
+/*
 ars technica
 */
 .ad_wrapper, .ad_crown, .inline-playlist,
@@ -123,3 +132,23 @@ body > div:has(img[src*="getadmiral.com"]) {
     display: none !important;
 }
 
+/*
+slashgear
+*/
+html:has(head meta[property="og:site_name"][content="SlashGear"]) {
+    overflow: initial !important;
+
+/*  nested selectors not working in Safari 17.4.1  */
+    /*> body {
+        overflow: initial !important;
+    }*/
+}
+
+html:has(head meta[property="og:site_name"][content="SlashGear"]) > body {
+    overflow: initial !important;
+}
+
+div.holder .under-art, div.holder .nextup-heading, div.content article:nth-child(n+2) {
+    visibility: hidden !important;
+    display: none !important;
+}
