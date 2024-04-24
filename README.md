@@ -1,6 +1,8 @@
 # adblock.css
 Safari user agent stylesheet to block annoying stuff
 
+![block admiral popups with css](Screenshot.png)
+
 ## Usage
 
 Download <a href="https://raw.githubusercontent.com/catskull/adblock.css/main/adblock.css" download>adblock.css</a>
