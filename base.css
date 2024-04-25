@@ -148,7 +148,7 @@ html:has(head meta[property="og:site_name"][content="SlashGear"]) > body {
     overflow: initial !important;
 }
 
-div.holder .under-art, div.holder .nextup-heading, div.content article:nth-child(n+2) {
+.sticky-ad-container, div.holder .under-art, div.holder .nextup-heading, html:has(head meta[property="og:site_name"][content="SlashGear"]) > article:nth-child(n+2) {
     visibility: hidden !important;
     display: none !important;
 }
