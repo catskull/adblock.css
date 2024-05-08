@@ -152,3 +152,12 @@ html:has(head meta[property="og:site_name"][content="SlashGear"]) > body {
     visibility: hidden !important;
     display: none !important;
 }
+
+/*
+st george news (the worst website)
+*/
+#email_popup {
+	display: none !important;
+	visibility: hidden !important;
+}
+
