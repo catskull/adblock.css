@@ -161,3 +161,12 @@ st george news (the worst website)
 	visibility: hidden !important;
 }
 
+/*
+iptorrents
+*/
+#iptStart > #Head + #body > tbody > tr > td > .tmS,
+#iptStart > #Head + #body > tbody > tr > td > .tog,
+#iptStart > #Head > .butRow {
+    visibility: hidden !important;
+    display: none !important;
+}
