@@ -33,6 +33,11 @@ slickdeals
 	margin: 0 auto !important;
 }
 
+.slickdealsHeader__dropdown {
+	animation: none !important;
+	transform-origin: none !important;
+}
+
 /*
 fandom
 */
