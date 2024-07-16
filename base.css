@@ -76,7 +76,7 @@ zelda dungeon
 /*
 reddit
 */
-shreddit-comments-page-ad {
+shreddit-comments-page-ad, [bundlename="sidebar_ad"] {
 	visibility: hidden !important;
 	display: none !important;
 }
