@@ -41,7 +41,7 @@ slickdeals
 /*
 fandom
 */
-.top-ads-container, .bottom-ads-container, .global-navigation, .notifications-placeholder, #WikiaBar {
+.top-ads-container, .bottom-ads-container, .global-navigation, .notifications-placeholder, #WikiaBar, #featured-video__player-container {
 	visibility: hidden !important;
 	display: none !important;
 }
