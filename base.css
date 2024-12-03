@@ -1,11 +1,9 @@
 /*
-general
+pixel art - https://dialup.cafe/@vga256/113586923855577734
 */
-/*[class*="ad-"], [class*="Ad"], [class*="aD-"], [class*="AD-"],
-[id*="ad-"], [id*="Ad"], [id*="aD-"], [id*="AD-"] {
-	visibility: hidden !important;
-	display: none !important;
-}*/
+body > img:only-of-type, .mw-mmv-image img {
+	image-rendering: crisp-edges !important;
+}
 
 /*
 ars technica
@@ -18,6 +16,12 @@ ars technica
 
 .left-column {
 	margin: 0 auto !important;
+}
+
+html:has(head link[rel="canonical"][href*="arstechnica.com"]) .ad-wrapper,
+html:has(head link[rel="canonical"][href*="arstechnica.com"]) header {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 /*
@@ -63,6 +67,10 @@ ksl
 [class^="InformationBubble__PointerBox"] {
 	visibility: hidden !important;
 	display: none !important;
+}
+html:has(head meta[property="og:url"][content*="www.ksl.com"]) .right a[onclick="sendBtgToGA()"]{
+  display: none !important;
+  visibility: hidden !important;
 }
 
 /*
