@@ -1,4 +1,13 @@
 /*
+churchofjesuschrist.org
+*/
+html:has(head link[rel="canonical"][href*="churchofjesuschrist.org"]) feed-back {
+	visibility: hidden !important;
+	display: none !important;
+}
+
+
+/*
 pixel art - https://dialup.cafe/@vga256/113586923855577734
 */
 body > img:only-of-type, .mw-mmv-image img {
@@ -19,7 +28,8 @@ ars technica
 }
 
 html:has(head link[rel="canonical"][href*="arstechnica.com"]) .ad-wrapper,
-html:has(head link[rel="canonical"][href*="arstechnica.com"]) header {
+html:has(head link[rel="canonical"][href*="arstechnica.com"]) header,
+html:has(head link[rel="canonical"][href*="arstechnica.com"]) .ars-interlude-container {
   display: none !important;
   visibility: hidden !important;
 }
