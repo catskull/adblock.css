@@ -6,7 +6,6 @@ html:has(head link[rel="canonical"][href*="churchofjesuschrist.org"]) feed-back 
 	display: none !important;
 }
 
-
 /*
 pixel art - https://dialup.cafe/@vga256/113586923855577734
 */
@@ -50,6 +49,11 @@ slickdeals
 .slickdealsHeader__dropdown {
 	animation: none !important;
 	transform-origin: none !important;
+}
+
+li.frontpageGrid__feedItem:has(span.dealCardBadge--promoted) {
+	visibility: hidden !important;
+	display: none !important;
 }
 
 /*
@@ -102,6 +106,13 @@ shreddit-comments-page-ad, [bundlename="sidebar_ad"] {
 /*
 mozilla ads
 */
+html:has(head link[rel="canonical"][href*="developer.mozilla.org"]) section.place.side.new-side,
+html:has(head link[rel="canonical"][href*="developer.mozilla.org"]) .bottom-banner-container,
+html:has(head link[rel="canonical"][href*="developer.mozilla.org"]) #nav-footer {
+	visibility: hidden !important;
+	display: none !important;
+}
+
 .top-banner:has(section.place.top.container) {
 	visibility: hidden !important;
 	display: none !important;
