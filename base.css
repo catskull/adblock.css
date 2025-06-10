@@ -1,3 +1,69 @@
+/* Override all fonts to use system fonts */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important;
+}
+
+/* Specific overrides for common elements */
+body, div, span, p, h1, h2, h3, h4, h5, h6, 
+a, em, strong, small, sub, sup, 
+input, textarea, select, button,
+table, td, th, tr, tbody, thead, tfoot {
+    font-family: -apple-system, system-ui, sans-serif !important;
+}
+
+/* Override monospace fonts for code elements */
+code, pre, kbd, samp, tt, var {
+    font-family: ui-monospace, monospace !important;
+}
+
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('https://github.com/rektdeckard/departure-mono/raw/refs/heads/main/public/assets/DepartureMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Controls how the font is displayed while loading */
+}
+
+/*html {*/
+/*html:has(head link[rel="stylesheet"][href*="https://youtube.com"][id="base-css"]) yt-live-chat-text-message-renderer {*/
+yt-live-chat-text-message-renderer #message {
+	font-size: 1.5em;
+	font-family: "Departure Mono";
+	color: black !important;
+}
+
+yt-live-chat-author-chip #author-name {
+	font-family: "Times New Roman";
+	font-size: 1.5em;
+	color: blue !important;
+	text-transform: uppercase !important;
+}
+
+yt-live-chat-author-chip #author-name::before {
+	content: "/u ";
+	color: darkviolet;
+	font-size: 21m;
+	font-family: "Papyrus";
+	font-weight: bolder;
+}
+
+yt-live-chat-author-chip #author-name::after {
+	content: " says: ";
+	color: darkviolet;
+	font-size: 21m;
+	font-family: "Papyrus";
+	font-weight: bolder;
+}
+
+#author-photo.yt-live-chat-text-message-renderer {
+	border-radius: unset !important;
+}
+
+#author-photo.yt-live-chat-text-message-renderer img {
+	width: 69px !important;
+}
+
+
 p {
 	text-wrap: pretty !important;
 }
@@ -82,6 +148,7 @@ ksl
 .paid_ad_queue_break,
 .queue:has(h3.sponsored),
 .LiveNow,
+.story .right,
 [class^="InformationBubble__PointerBox"] {
 	visibility: hidden !important;
 	display: none !important;
