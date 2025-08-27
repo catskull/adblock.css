@@ -69,6 +69,14 @@ p {
 }
 
 /*
+google will not force feed me hazardous AI
+*/
+html:has(head link[rel="icon"][href*="gstatic.com/images/branding/searchlogo"]) div[data-mcpr] {
+	visibility: hidden !important;
+	display: none !important;
+}
+
+/*
 churchofjesuschrist.org
 */
 html:has(head link[rel="canonical"][href*="churchofjesuschrist.org"]) feed-back {
