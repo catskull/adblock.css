@@ -16,14 +16,6 @@ code, pre, kbd, samp, tt, var, [class^="pl-"] {
     font-family: ui-monospace, monospace !important;
 }
 
-@font-face {
-  font-family: 'Departure Mono';
-  src: url('https://github.com/rektdeckard/departure-mono/raw/refs/heads/main/public/assets/DepartureMono-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; /* Controls how the font is displayed while loading */
-}
-
 /*html {*/
 /*html:has(head link[rel="stylesheet"][href*="https://youtube.com"][id="base-css"]) yt-live-chat-text-message-renderer {*/
 yt-live-chat-text-message-renderer #message {
@@ -75,6 +67,12 @@ html:has(head link[rel="icon"][href*="gstatic.com/images/branding/searchlogo"]) 
 	visibility: hidden !important;
 	display: none !important;
 }
+
+html:has(head link[rel="icon"][href*="gstatic.com/images/branding/searchlogo"]) #taw {
+	visibility: hidden !important;
+	display: none !important;
+}
+
 
 /*
 churchofjesuschrist.org
