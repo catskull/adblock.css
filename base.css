@@ -112,24 +112,35 @@ html:has(head link[rel="canonical"][href*="arstechnica.com"]) .ars-interlude-con
 /*
 slickdeals
 */
+html:has(head meta[property="og:site_name"][content="Slickdeals"]) {
+	.megaBanner,
+	.usersnapButton,
+	.frontpageGrid__occasionTakeoverDealCard,
+	iframe,
+	li[class^="img_"],
+	.slickdealsSidebar__container,
+	.slickdealsHeader__occassionTakeoverSection,
+	.announcementBar,
+	.frontpageGrid__bannerAd,
+	.ad,
+	.variableWidthAd,
+	.variableHeightAd,
+	#sideColumn,
+	.slickdealsHeader__disclaimer,
+	.slickdealsHeaderSubNav,
+	.dealAlertsForYou,
+	.omegaBanner,
+	#omegaBanner,
+	.slickdealsHeader__dropdown,
+	li.frontpageGrid__feedItem:has(span.dealCardBadge--promoted)
+	{
+		visibility: hidden !important;
+		display: none !important;
+	}
 
-.announcementBar, .frontpageGrid__bannerAd, .ad, .variableWidthAd, .variableHeightAd, #sideColumn, .slickdealsHeader__disclaimer, .slickdealsHeaderSubNav, .dealAlertsForYou, .omegaBanner, #omegaBanner {
-	visibility: hidden !important;
-	display: none !important;
-}
-
-#mainColumn {
-	margin: 0 auto !important;
-}
-
-.slickdealsHeader__dropdown {
-	animation: none !important;
-	transform-origin: none !important;
-}
-
-li.frontpageGrid__feedItem:has(span.dealCardBadge--promoted) {
-	visibility: hidden !important;
-	display: none !important;
+	#mainColumn {
+		margin: 0 auto !important;
+	}
 }
 
 /*
