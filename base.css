@@ -77,7 +77,18 @@ html:has(head link[rel="icon"][href*="gstatic.com/images/branding/searchlogo"]) 
 /*
 churchofjesuschrist.org
 */
-html:has(head link[rel="canonical"][href*="churchofjesuschrist.org"]) feed-back {
+html:has(head link[rel="canonical"][href*="churchofjesuschrist.org"]) {
+	feed-back {
+		visibility: hidden !important;
+		display: none !important;
+	}
+	platform-header {
+		height: unset !important;
+		min-height: unset !important;
+	}
+}
+
+#menusSearchContainer banner-single-line {
 	visibility: hidden !important;
 	display: none !important;
 }
@@ -263,11 +274,6 @@ slashgear
 */
 html:has(head meta[property="og:site_name"][content="SlashGear"]) {
     overflow: initial !important;
-
-/*  nested selectors not working in Safari 17.4.1  */
-    /*> body {
-        overflow: initial !important;
-    }*/
 }
 
 html:has(head meta[property="og:site_name"][content="SlashGear"]) > body {
