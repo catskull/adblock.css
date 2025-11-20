@@ -1,13 +1,5 @@
 /* Override all fonts to use system fonts */
-* {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important;
-}
-
-/* Specific overrides for common elements */
-body, div, span, p, h1, h2, h3, h4, h5, h6, 
-a, em, strong, small, sub, sup, 
-input, textarea, select, button,
-table, td, th, tr, tbody, thead, tfoot {
+*:not(i) {
     font-family: -apple-system, system-ui, sans-serif !important;
 }
 
