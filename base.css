@@ -1,5 +1,5 @@
 /* Override all fonts to use system fonts */
-*:not(i) {
+*:not(i, mat-icon) {
     font-family: -apple-system, system-ui, sans-serif !important;
 }
 
