@@ -1,10 +1,10 @@
-/* Override all fonts to use system fonts */
-*:not(i, mat-icon) {
+/* Override all fonts to use system fonts (except localhost/Storybook) */
+html:not(:has(head link[href*="sb-manager"]), :has(head link[rel="modulepreload"][href*="sb-manager"]), :has(#storybook-root), :has(head link[rel="canonical"][href*="flybreeze.com"])) *:not(i, mat-icon) {
     font-family: -apple-system, system-ui, sans-serif !important;
 }
 
-/* Override monospace fonts for code elements */
-code, pre, kbd, samp, tt, var, [class^="pl-"] {
+/* Override monospace fonts for code elements (except localhost/Storybook/flybreeze) */
+html:not(:has(head link[href*="sb-manager"]), :has(head link[rel="modulepreload"][href*="sb-manager"]), :has(#storybook-root), :has(head link[rel="canonical"][href*="flybreeze.com"])) :is(code, pre, kbd, samp, tt, var, [class^="pl-"]) {
     font-family: ui-monospace, monospace !important;
 }
 
