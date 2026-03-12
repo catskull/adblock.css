@@ -48,7 +48,7 @@ yt-live-chat-author-chip #author-name::after {
 }
 
 
-p {
+html:not(:has(head link[href*="sb-manager"]), :has(head link[rel="modulepreload"][href*="sb-manager"]), :has(#storybook-root), :has(head link[rel="canonical"][href*="flybreeze.com"])) p {
 	text-wrap: pretty !important;
 }
 
