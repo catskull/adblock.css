@@ -1,5 +1,10 @@
 /* Override all fonts to use system fonts (except localhost/Storybook) */
-html:not(:has(head link[href*="sb-manager"]), :has(head link[rel="modulepreload"][href*="sb-manager"]), :has(#storybook-root), :has(head link[rel="canonical"][href*="flybreeze.com"])), *:not(i, mat-icon, .material-icons) {
+html:not(
+  :has(head link[href*="sb-manager"]),
+  :has(head link[rel="modulepreload"][href*="sb-manager"]),
+  :has(#storybook-root),
+  :has(head link[rel="canonical"][href*="flybreeze.com"])
+) *:not(i, mat-icon, .material-icons) {
     font-family: -apple-system, system-ui, sans-serif !important;
 }
 
@@ -55,8 +60,8 @@ html:not(:has(head link[href*="sb-manager"]), :has(head link[rel="modulepreload"
 /*
 google developers
 */
-html:has(head meta[property="og:url"][content*="developers.google.com"]) .devsite-nav-toggle {
-	font: normal normal normal 24px/24px Material Icons !important;
+html:has(head meta[property="og:url"][content*="developers.google.com"]):not(#\9) .devsite-nav-toggle {
+    font: normal normal normal 24px/24px "Material Icons" !important;
 }
 
 /*
