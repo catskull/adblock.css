@@ -53,6 +53,13 @@ p {
 }
 
 /*
+youtube
+*/
+html:has(head meta[property="og:url"][content*="youtube"]) * {
+	font-width: normal !important;
+}
+
+/*
 google developers
 */
 html:has(head meta[property="og:url"][content*="developers.google.com"]) .devsite-nav-toggle {
