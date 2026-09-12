@@ -55,7 +55,7 @@ p {
 /*
 youtube
 */
-html:has(head meta[property="og:url"][content*="youtube"]) * {
+html:has(head link[rel="canonical"][href*="youtube.com"]) * {
 	font-width: normal !important;
 }
 
